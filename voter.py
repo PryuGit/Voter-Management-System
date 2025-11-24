@@ -24,7 +24,9 @@ def  vote(n):#VOTING CANDIDATES
             print("Invalid Data")
     value={k:v for k,v in sorted(dict.items(), key=lambda item:item[1])}
     reverse={k:v for k,v in sorted(dict.items(), key=lambda item:item[1],reverse="true")}
-    
+    return value,reverse
+
+def result(value,reverse):#DISPLAY RESULT
     print("--------------------------------------")
     ans=input("Descending or Ascending??(D/A):")
     if ans.upper() == 'A':
@@ -52,7 +54,8 @@ def voter_count():#COUNTING VOTERS
     return n
 
 count=voter_count()
-voter=vote(count)
+ascending,descending=vote(count)
+result(ascending,descending)
 
 
 
