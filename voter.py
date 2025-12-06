@@ -79,19 +79,16 @@ class Result():
         self._reverse=reverse
         
         print("--------------------------------------")
-        ans=input("Descending or Ascending??(D/A):")
-        if ans.upper() == 'A':
-            print("Ascending\n",self.get_ascending())
-        elif ans.upper() == 'D':
-            print("Descending\n",self.get_descending())
-        else:
-            while ans.upper()!='A' and ans.upper()!='D':
-                print("Error in the system.")
-                ans=input("Descending or Ascending??(D/A):")
+        while True:
+            ans=input("Descending or Ascending??(D/A):")
             if ans.upper() == 'A':
-                print("Ascending\n",self.get_ascending)
+                print("Ascending\n",self.get_ascending())
+                break
             elif ans.upper() == 'D':
-                print("Descending\n",self.get_descending)
+                print("Descending\n",self.get_descending())
+                break
+            else:
+                print("Error in the system.")
         print("======================================")         
     
 
